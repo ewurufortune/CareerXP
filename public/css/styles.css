@@ -1,0 +1,225 @@
+
+body {
+  background-color: #EEB76B;
+ 
+opacity: 1;
+background-image: radial-gradient(grey 0.65px, #EEB76B 0.65px);
+background-size: 13px 13px;
+}
+
+select{
+  background-color: white;
+color: #9C3D54;}
+.select-group{
+  margin-bottom: 13px;
+}
+.centered {
+   
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+.results{
+   margin-top:50px ;
+   width: 90%;
+   margin-left: 9%;
+}
+.tags{
+font-size:medium;
+}
+/*  */
+/* The side navigation menu */
+.sidebar {
+  opacity: 1;
+  z-index: 15;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #555;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #9C3D54;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #E2703A;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.jumbotron{
+  width:80%;
+  margin-left: 10%;
+  background-color: #EEB76B;
+ 
+opacity: 1;
+background-image: radial-gradient(grey 0.65px, #EEB76B 0);
+background-size: 13px 13px;
+  
+}
+.google-card{
+  margin-bottom: 4%;
+}
+
+/* media queries */
+@media (max-width:900px){
+  body{
+    text-align: center;
+  }
+.display-3{
+font-size: 2rem;
+}
+
+.button-group{
+  display: flex;
+   position: relative;
+ top: 5px;
+ }
+.socials{
+  display: flex;
+  margin-left: 80px;
+}
+.link{
+  margin-top: 5px;
+  width: 30%;
+}
+.feed{
+  margin-left: 0;
+width: 100%;
+}
+.head-button{
+  width: 100%;
+  margin: 0;
+  align-items: center;
+}
+
+h3{
+  font-size:1rem;
+}
+.btn-lg{
+  line-height: 0.5rem;
+  width: 5rem;
+  overflow: hidden;
+  font-size: smaller;
+}
+}
+
+.glowing-red {  font-family: Arial, Helvetica, sans-serif;  text-transform: uppercase;}
+  .glowing-red:hover .btn-slide-show-text1 {  margin-left: 65px;} 
+   .btn-moving-gradient {  height: 55px;  width: 200px;  font-size: 16px;  font-weight: 600;  color: rgb(255, 255, 255);  cursor: pointer;  border: none;  background-size: 300% 100%;  border-radius: 50px;} 
+    .btn-moving-gradient:hover {  transition: all 0.5s ease-in-out 0s;  background-position: 100% 0px;}  
+    .btn-moving-gradient--red {  background-image: linear-gradient(90deg, rgb(239, 37, 60), rgb(239, 148, 37), rgb(239, 104, 37), rgb(239, 35, 60));  box-shadow: rgb(239, 148, 37) 0px 4px 15px 0px;}  
+
+
+/* badge */
+.badges{
+  position: relative;
+  width: 6rem;
+  font-size: 1rem;
+}
+.about-headers{
+ 
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 350px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  top: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}

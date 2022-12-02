@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <i class="fas fa-map fa-6x"></i>
+    <h1 class="display-3">Roadmaps</h1>
+    <p class="secret-text">Share your journey with the world!</p>
+
+    <form action="/submit" method="POST">
+
+      <div class="form-group">
+        <div class="select-group">
+          <select class="" name="industry">
+            <option value="0">Select Industry</option>
+            <option value="Tech">Tech</option>
+          <option value="Health">Health</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+          <option value="Education">Education</option>
+          
+          <option value="Entertainment">Entertainment</option>
+       
+          </select>
+          <select class="" name="targetDemo">
+            <option value="Ignorance">Relevant To?</option>
+          <option value="Discovery">Discovery</option>
+          <option value="Reason why">Reason why</option>
+          <option value="Helpful resources">Helpful resources</option>
+          <option value="First big break">First big break</option>
+        <option value="First interview">First interview</option>
+        <option value="First day on the job">First day on the job</option>
+           <option value="Job experience">Job experience</option>
+           <option value="Twist">Twist </option>
+           <option value="Exit">Exit </option>
+           <option value="Post job">Post-Job</option>
+          </select>
+        </div>
+     
+
+      
+
+        
+        <input type="text" class="form-control text-center" name="experience" placeholder="Share an experience here.">
+
+      </div>
+      <button type="submit" class="btn submit-button btn-dark">Submit</button>
+    </form>
+
+
+  </div>
+  <div id="snackbar">Thank you for contributing!</div>
+</div>
+<%- include('partials/footer') %>

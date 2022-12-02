@@ -1,0 +1,115 @@
+<%- include('partials/header') %>
+<!--  -->
+<!-- The sidebar -->
+<div class="sidebar">
+  <a class="active" href="#home">Home</a>
+  <a href="/submit">Submit</a>
+ 
+  <a href="/about">About</a>
+  <a href="/logout">Log Out</a>
+</div>
+
+<!-- Page content -->
+
+<!--  -->
+<div class="jumbotron text-center">
+ 
+  <div class="container">
+   
+    <i class="fas fa-map fa-6x"></i>
+    <h1 class="display-3">Generate a Career Roadmap</h1>
+
+    <h1 class=""><span class="badge badges bg-secondary">Healthcare</span></h1>
+    
+   
+<!-- un-trained -->
+
+  <% const discovery=[]%>
+  <% const preJob=[]%>
+  <% const bigBreak=[]%>
+  <% const FDOTJ=[]%>
+  <% const job=[]%>
+  <% const exit=[]%>
+  <% const postJob=[]%>
+    <% usersWithHealth.forEach(function(user){ %>
+      <% console.log('this is it'+user.storyRoadMap+'it ends')%>
+    <% user.storyRoadMap.forEach(function(info){ %>
+      <!--  -->
+      <% if (info.industry==='Health' ){%>
+        <!--  -->
+<% if (info.criteria==='Discovery' || info.criteria==='Ignorance' ){%>
+<%discovery.push(info)%>
+<%}else if (info.criteria==='Reason why' || info.criteria==='Helpful resources' ){%>
+  <%preJob.push(info)%>
+  <%}else if ( info.criteria==='First big break'  ){%>
+    <%bigBreak.push(info)%>
+    <%}else  if ( info.criteria==='First interview'  ){%>
+      <%FDOTJ.push(info)%>
+      <%}else if (info.criteria==='Job experience' || info.criteria==='Twist' ){%>
+      <%job.push(info)%>
+      <%}else if (info.criteria==='Post job'  ){%>
+        <%postJob.push(info)%>
+        <%}else {%>
+  <%exit.push(info)%>
+<%}%>
+<!--  -->
+<%}else {%>
+ 
+<%}%>
+<!--  -->
+    <% }) %>
+      <% }) %>
+
+<!--        
+Ignorance
+Discovery
+Reason why
+Helpful resources
+First big break
+First interview
+First day on the job
+Job experience
+Twist
+Exit
+
+
+
+
+         -->
+
+  
+<%const discoveryRand=Math.floor(Math.random()*discovery.length)%>
+<%const preJobRand=Math.floor(Math.random()*preJob.length)%>
+<%const bigBreakRand=Math.floor(Math.random()*bigBreak.length)%>
+<%const FDOTJRand=Math.floor(Math.random()*FDOTJ.length)%>
+<%const jobRand=Math.floor(Math.random()*job.length)%>
+<%const exitRand=Math.floor(Math.random()*exit.length)%>
+<%const postJobRand=Math.floor(Math.random()*postJob.length)%>
+
+<div class="results">
+  <h3><span class="badge bg-warning text-dark"> <%=discovery[discoveryRand].criteria%> </span> <%=discovery[discoveryRand].experience%> </h3>
+  <h3><span class="badge bg-warning text-dark"> <%=preJob[preJobRand].criteria%> </span> <%=preJob[preJobRand].experience%> </h3>
+  <h3><span class="badge bg-warning text-dark"> <%=bigBreak[bigBreakRand].criteria%> </span> <%=bigBreak[bigBreakRand].experience%> </h3>
+  <h3><span class="badge bg-warning text-dark"> <%=FDOTJ[FDOTJRand].criteria%> </span> <%=FDOTJ[FDOTJRand].experience%> </h3>
+ <h3><span class="badge bg-warning text-dark"> <%=job[jobRand].criteria%> </span> <%=job[jobRand].experience%> </h3>
+  <h3><span class="badge bg-warning text-dark"> <%=exit[exitRand].criteria%> </span><%=exit[exitRand].experience%></h3>
+ <h3><span class="badge bg-warning text-dark"> <%=postJob[postJobRand].criteria%> </span><%=postJob[postJobRand].experience%></h3>
+       
+</div>
+
+    <hr>
+    <a class="btn btn-moving-gradient btn-moving-gradient--pink" href="/health" role="button">Generate </a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
+<!-- 
+discovery
+preJob
+bigBreak
+Job
+exit
+postJob
+
+
+ -->
