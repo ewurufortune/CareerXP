@@ -137,6 +137,10 @@ width: 100%;
   align-items: center;
 }
 
+
+.submit-button{
+  width: 5rem;
+}
 h3{
   font-size:1rem;
 }
