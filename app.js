@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 // mongodb://localhost:27017/expmapDB
 // mongodb+srv://ewurufortune:pmX0GdJHQumI8jVb@resourcecluster.inplmwx.mongodb.net/roadmapDB
-mongoose.connect("mongodb://localhost:27017/expmapDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://ewurufortune:pmX0GdJHQumI8jVb@resourcecluster.inplmwx.mongodb.net/roadmapDB", {useNewUrlParser: true});
 mongoose.set("useCreateIndex", true);
 
 const roadmapSchema = new mongoose.Schema ({
