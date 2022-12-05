@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 // mongodb://localhost:27017/expmapDB
 // mongodb+srv://ewurufortune:pmX0GdJHQumI8jVb@resourcecluster.inplmwx.mongodb.net/roadmapDB
-mongoose.connect("mongodb+srv://ewurufortune:pmX0GdJHQumI8jVb@resourcecluster.inplmwx.mongodb.net/roadmapDB", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/expmapDB", {useNewUrlParser: true});
 mongoose.set("useCreateIndex", true);
 
 const roadmapSchema = new mongoose.Schema ({
@@ -125,7 +125,7 @@ app.get("/roadmaps", function(req, res){
   });
 });
 
-app.get("/health", function(req, res){
+app.get("/startup", function(req, res){
 
 
 
@@ -136,7 +136,7 @@ app.get("/health", function(req, res){
 
       console.log('FIRST USER'+foundUsers+'END USER')
       if (foundUsers) {
-        res.render("health", {usersWithHealth: foundUsers});
+        res.render("startup", {usersWithStartup: foundUsers});
       }
     }
   });
