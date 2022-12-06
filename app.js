@@ -192,7 +192,7 @@ console.log(latestExp)
 
         foundUser.save(function(){
 
-          res.redirect("/roadmaps");
+          res.redirect("/submit");
         });
    
       }
