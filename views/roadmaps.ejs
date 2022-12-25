@@ -57,22 +57,7 @@
     <% }) %>
       <% }) %>
 
-<!--        
-Ignorance
-Discovery
-Reason why
-Helpful resources
-First big break
-First interview
-First day on the job
-Job experience
-Twist
-Exit
 
-
-
-
-         -->
 
   
 <%const discoveryRand=Math.floor(Math.random()*discovery.length)%>
@@ -84,20 +69,44 @@ Exit
 <%const postJobRand=Math.floor(Math.random()*postJob.length)%>
 
 <div class="results">
-  <h3><span class="badge bg-warning text-dark"> <%=discovery[discoveryRand].criteria%> </span> <%=discovery[discoveryRand].experience%> </h3>
-  <h3><span class="badge bg-warning text-dark"> <%=preJob[preJobRand].criteria%> </span> <%=preJob[preJobRand].experience%> </h3>
-  <h3><span class="badge bg-warning text-dark"> <%=bigBreak[bigBreakRand].criteria%> </span> <%=bigBreak[bigBreakRand].experience%> </h3>
-  <h3><span class="badge bg-warning text-dark"> <%=FDOTJ[FDOTJRand].criteria%> </span> <%=FDOTJ[FDOTJRand].experience%> </h3>
- <h3><span class="badge bg-warning text-dark"> <%=job[jobRand].criteria%> </span> <%=job[jobRand].experience%> </h3>
-  <h3><span class="badge bg-warning text-dark"> <%=exit[exitRand].criteria%> </span><%=exit[exitRand].experience%></h3>
- <h3><span class="badge bg-warning text-dark"> <%=postJob[postJobRand].criteria%> </span><%=postJob[postJobRand].experience%></h3>
+  <div class='exp-content'>
+    <h3 class="cc"><span class="badge bg-warning text-dark"> <%=discovery[discoveryRand].criteria%> </span> <%=discovery[discoveryRand].experience%> </h3>
+
+  </div >
+  <div class='exp-content'>
+    <h3 class='cc'><span class="badge bg-warning text-dark"> <%=preJob[preJobRand].criteria%> </span> <%=preJob[preJobRand].experience%> </h3>
+
+  </div >
+ <div class="exp-content">
+  <h3 class='cc'><span class="badge bg-warning text-dark"> <%=bigBreak[bigBreakRand].criteria%> </span> <%=bigBreak[bigBreakRand].experience%> </h3>
+
+ </div> 
+  <div class='exp-content'>
+    <h3 class='cc'><span class="badge bg-warning text-dark"> <%=FDOTJ[FDOTJRand].criteria%> </span> <%=FDOTJ[FDOTJRand].experience%> </h3>
+
+  </div>
+  <div class='exp-content'>
+    <h3 class='cc'><span class="badge bg-warning text-dark"> <%=job[jobRand].criteria%> </span> <%=job[jobRand].experience%> </h3>
+
+  </div >
+ <div class='exp-content'>
+  <h3 class='cc'><span class="badge bg-warning text-dark"> <%=exit[exitRand].criteria%> </span><%=exit[exitRand].experience%></h3>
+
+ </div>
+ <div class='exp-content'>
+  <h3 class='cc'><span class="badge bg-warning text-dark"> <%=postJob[postJobRand].criteria%> </span><%=postJob[postJobRand].experience%></h3>
+
+ </div>
+ <div>
+
+ </div>
        
 </div>
 
     <hr>
     <a class="btn glowing-red btn-moving-gradient btn-moving-gradient--red" href="/roadmaps" role="button">Generate </a>
    
- </div>
+ </div class='content'>
 
 </div>
 

@@ -238,3 +238,15 @@ h3{
   from {top: 30px; opacity: 1;}
   to {top: 0; opacity: 0;}
 }
+
+.exp-content{
+  border-bottom: solid 1px black;
+  margin: 5% 0 0 0%;
+}
+@media only screen and (min-width: 600px) {
+  .exp-content{
+    border-bottom: solid 1px black;
+    margin: 5% 0 0 0%;
+    font-weight: 100;  }
+    .cc{font-size: 120%;}
+}
